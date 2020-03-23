@@ -7,7 +7,7 @@
 
 var options = {
     chart: {
-      height: 385,
+      height: 365,
       type: 'line',
       stacked: false,
       toolbar: {
@@ -16,7 +16,7 @@ var options = {
     },
     stroke: {
       width: [0, 2, 5],
-      curve: 'smooth'
+      curve: 'smooth',
     },
     plotOptions: {
       bar: {
@@ -25,32 +25,33 @@ var options = {
       },
       
     },
-    colors: ["#4d79f6", "#2f3a63", "#4ac7ec"],
+    colors: ["#1ccab8", "#6d81f5", "#d5b752"],
     series: [{
       name: 'Leads',
       type: 'column',
-      data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+      data: [11, 30, 10, 35, 15, 40, 20, 50, 25, 60, 30],
     }, {
       name: 'Vendors',
       type: 'area',
-      data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+      data: [ 8, 9, 20, 8, 21, 11, 44, 10, 23, 14, 6,],
     }, {
       name: 'Invoice Generate',
       type: 'line',
-      data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+      data: [0,30,10,35,15,40,20,50,25,60,30],
     }],
+    
     fill: {
         type: 'gradient',
         gradient: {
             inverseColors: true,
-            shade: 'dark',
+            shade: 'light',
             type: "horizontal",
             shadeIntensity: 0.25,
             gradientToColors: undefined,
             opacityFrom: 1,
             opacityTo: 1,
             stops: [0, 100, 100, 100]
-        }
+        },
     },
     labels: ['01/01/2003', '02/01/2003','03/01/2003','04/01/2003','05/01/2003','06/01/2003','07/01/2003','08/01/2003','09/01/2003','10/01/2003','11/01/2003'],
     markers: {
@@ -60,18 +61,17 @@ var options = {
       type:'datetime',
       axisBorder: {
         show: true,
-        color: '#28365f',
+        color: '#bec7e0',
       },  
       axisTicks: {
         show: true,
-        color: '#28365f',
+        color: '#bec7e0',
       },    
     },
     yaxis: {
       min: 0
     },
     tooltip: {
-      theme: 'dark',
       shared: true,
       intersect: false,
       y: {
@@ -117,6 +117,16 @@ var options = {
     chart: {
       type: 'radialBar',
       height: 300,
+      dropShadow: {
+        enabled: true,
+        top: 5,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 5,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
     },
     plotOptions: {
       radialBar: {
@@ -138,7 +148,7 @@ var options = {
           },
           value: {
               fontSize: '16px',
-              color: '#b9c2d6',
+              color: '#50649c',
           },          
         }
       },
@@ -190,7 +200,7 @@ $('#world-map-markers').vectorMap({
     hoverColor : false,
     regionStyle : {
         initial : {
-            fill : '#6673a7'
+            fill : '#c8d3f7'
         }
     },
   

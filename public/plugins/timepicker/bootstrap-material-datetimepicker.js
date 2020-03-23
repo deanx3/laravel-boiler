@@ -379,8 +379,8 @@
                     var x = -(162 * (Math.sin(-Math.PI * 2 * (i / 12))));
                     var y = -(162 * (Math.cos(-Math.PI * 2 * (i / 12))));
 
-                    var fill = ((this.currentDate.format(hFormat) == i) ? "#4d79f6" : 'transparent');
-                    var color = ((this.currentDate.format(hFormat) == i) ? "#394b7b" : '#fff');
+                    var fill = ((this.currentDate.format(hFormat) == i) ? "#ff7d51" : 'transparent');
+                    var color = ((this.currentDate.format(hFormat) == i) ? "#fff" : '#335276');
 
                     var svgHourCircle = this.createSVGElement("circle", {'id': 'h-' + i, 'class': 'dtp-select-hour', 'style': 'cursor:pointer', r: '30', cx: x, cy: y, fill: fill, 'data-hour': i});
 
@@ -391,7 +391,7 @@
                     {
                        svgHourCircle.className += " disabled";
                        svgHourText.className += " disabled";
-                       svgHourText.setAttribute('fill', '#4d79f6');
+                       svgHourText.setAttribute('fill', '#ff7d51');
                     } else
                     {
                        svgHourCircle.addEventListener('click', this._onSelectHour.bind(this));
@@ -409,8 +409,8 @@
                        var x = -(110 * (Math.sin(-Math.PI * 2 * (i / 12))));
                        var y = -(110 * (Math.cos(-Math.PI * 2 * (i / 12))));
 
-                       var fill = ((this.currentDate.format(hFormat) == (i + 12)) ? "#bbcdff" : 'transparent');
-                       var color = ((this.currentDate.format(hFormat) == (i + 12)) ? "#4d79f6" : '#7c9ec7');
+                       var fill = ((this.currentDate.format(hFormat) == (i + 12)) ? "#ffd2c2" : 'transparent');
+                       var color = ((this.currentDate.format(hFormat) == (i + 12)) ? "#ff7d51" : '#7c9ec7');
 
                        var svgHourCircle = this.createSVGElement("circle", {'id': 'h-' + (i + 12), 'class': 'dtp-select-hour', 'style': 'cursor:pointer', r: '30', cx: x, cy: y, fill: fill, 'data-hour': (i + 12)});
 
@@ -421,7 +421,7 @@
                        {
                           svgHourCircle.className += " disabled";
                           svgHourText.className += " disabled";
-                          svgHourText.setAttribute('fill', '#4d79f6');
+                          svgHourText.setAttribute('fill', '#ff7d51');
                        } else
                        {
                           svgHourCircle.addEventListener('click', this._onSelectHour.bind(this));
@@ -468,7 +468,7 @@
                     var x = -(s * (Math.sin(-Math.PI * 2 * (i / 60))));
                     var y = -(s * (Math.cos(-Math.PI * 2 * (i / 60))));
 
-                    var color = ((this.currentDate.format("m") == i) ? "#4d79f6" : 'transparent');
+                    var color = ((this.currentDate.format("m") == i) ? "#ff7d51" : 'transparent');
 
                     var svgMinuteCircle = this.createSVGElement("circle", {'id': 'm-' + i, 'class': 'dtp-select-minute', 'style': 'cursor:pointer', r: r, cx: x, cy: y, fill: color, 'data-minute': i});
 
@@ -490,7 +490,7 @@
                        var x = -(162 * (Math.sin(-Math.PI * 2 * (i / 60))));
                        var y = -(162 * (Math.cos(-Math.PI * 2 * (i / 60))));
 
-                       var color = ((this.currentDate.format("m") == i) ? "#394b7b" : '#fff');
+                       var color = ((this.currentDate.format("m") == i) ? "#fff" : '#335276');
 
                        var svgMinuteText = this.createSVGElement("text", {'id': 'tm-' + i, 'class': 'dtp-select-minute-text', 'text-anchor': 'middle', 'style': 'cursor:pointer', 'font-weight': 'bold', 'font-size': '20', x: x, y: y + 7, fill: color, 'data-minute': i});
                        svgMinuteText.textContent = i;
@@ -498,7 +498,7 @@
                        if (!this.toggleTime(i, false))
                        {
                           svgMinuteText.className += " disabled";
-                          svgMinuteText.setAttribute('fill', '#4d79f6');
+                          svgMinuteText.setAttribute('fill', '#ff7d51');
                        } else
                        {
                           svgMinuteText.addEventListener('click', this._onSelectMinute.bind(this));
@@ -527,22 +527,22 @@
 
                  var svgElement = this.createSVGElement("svg", {class: 'svg-clock', viewBox: '0,0,400,400'});
                  var svgGElement = this.createSVGElement("g", {transform: 'translate(200,200) '});
-                 var svgClockFace = this.createSVGElement("circle", {r: '192', fill: '#394b7b', stroke: '#4d79f6', 'stroke-width': 2});
-                 var svgClockCenter = this.createSVGElement("circle", {r: '15', fill: '#4d79f6'});
+                 var svgClockFace = this.createSVGElement("circle", {r: '192', fill: '#fff', stroke: '#ff7d51', 'stroke-width': 2});
+                 var svgClockCenter = this.createSVGElement("circle", {r: '15', fill: '#ff7d51'});
 
                  svgGElement.appendChild(svgClockFace)
 
                  if (isHour)
                  {
-                    var svgMinuteHand = this.createSVGElement("line", {class: 'minute-hand', x1: 0, y1: 0, x2: 0, y2: -150, stroke: '#4d79f6', 'stroke-width': 2});
-                    var svgHourHand = this.createSVGElement("line", {class: 'hour-hand', x1: 0, y1: 0, x2: 0, y2: hl, stroke: '#4d79f6', 'stroke-width': 8});
+                    var svgMinuteHand = this.createSVGElement("line", {class: 'minute-hand', x1: 0, y1: 0, x2: 0, y2: -150, stroke: '#ff7d51', 'stroke-width': 2});
+                    var svgHourHand = this.createSVGElement("line", {class: 'hour-hand', x1: 0, y1: 0, x2: 0, y2: hl, stroke: '#ff7d51', 'stroke-width': 8});
 
                     svgGElement.appendChild(svgMinuteHand);
                     svgGElement.appendChild(svgHourHand);
                  } else
                  {
-                    var svgMinuteHand = this.createSVGElement("line", {class: 'minute-hand', x1: 0, y1: 0, x2: 0, y2: -150, stroke: '#4d79f6', 'stroke-width': 2});
-                    var svgHourHand = this.createSVGElement("line", {class: 'hour-hand', x1: 0, y1: 0, x2: 0, y2: hl, stroke: '#4d79f6', 'stroke-width': 8});
+                    var svgMinuteHand = this.createSVGElement("line", {class: 'minute-hand', x1: 0, y1: 0, x2: 0, y2: -150, stroke: '#ff7d51', 'stroke-width': 2});
+                    var svgHourHand = this.createSVGElement("line", {class: 'hour-hand', x1: 0, y1: 0, x2: 0, y2: hl, stroke: '#ff7d51', 'stroke-width': 8});
 
                     svgGElement.appendChild(svgHourHand);
                     svgGElement.appendChild(svgMinuteHand);
@@ -1139,8 +1139,8 @@
                        $(th[i]).attr('fill', '#000');
                     }
 
-                    $(parent.find('#h-' + value)).attr('fill', '#bbcdff');
-                    $(parent.find('#th-' + value)).attr('fill', '#4d79f6');
+                    $(parent.find('#h-' + value)).attr('fill', '#ffd2c2');
+                    $(parent.find('#th-' + value)).attr('fill', '#ff7d51');
 
                     this.currentDate.hour(parseInt(value));
 
@@ -1175,8 +1175,8 @@
                        $(tm[i]).attr('fill', '#000');
                     }
 
-                    $(parent.find('#m-' + value)).attr('fill', '#bbcdff');
-                    $(parent.find('#tm-' + value)).attr('fill', '#4d79f6');
+                    $(parent.find('#m-' + value)).attr('fill', '#ffd2c2');
+                    $(parent.find('#tm-' + value)).attr('fill', '#ff7d51');
 
                     this.currentDate.minute(parseInt(value));
                     this.showTime(this.currentDate);

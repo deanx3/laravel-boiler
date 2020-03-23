@@ -12,7 +12,17 @@ var optionsCircle = {
     type: 'radialBar',
     height: 280,
     offsetY: -30,
-    offsetX: 20
+    offsetX: 20,
+    dropShadow: {
+      enabled: true,
+      top: 10,
+      left: 0,
+      bottom: 0,
+      right: 0,
+      blur: 2,
+      color: '#b6c2e4',
+      opacity: 0.1
+    },
   },
   plotOptions: {
     radialBar: {
@@ -24,21 +34,20 @@ var optionsCircle = {
       },
       track: {
         show: true,
-        background: '#3c4a82',
+        background: '#ddd',
         strokeWidth: '10%',
         opacity: 1,
         margin: 5, // margin is in pixels
       },
 
       dataLabels: {
-        enabled: true,
         name: {
-            fontSize: '18px',
-        },
-        value: {
-            fontSize: '16px',
-            color: '#b9c2d6',
-        },
+          fontSize: '18px',
+      },
+      value: {
+          fontSize: '16px',
+          color: '#50649c',
+      },
       }
     },
   },
@@ -107,7 +116,7 @@ $('#world-map-markers').vectorMap({
   hoverColor : false,
   regionStyle : {
       initial : {
-          fill : '#6673a7'
+          fill : '#3f7dff'
       }
   },
 
@@ -126,30 +135,30 @@ $('#world-map-markers').vectorMap({
       latLng: [37.090240, -95.712891],
       name: "USA",
       style: {
-        fill: "#4d79f6"
+        fill: "#e0e7fd"
       }
     },
     {
       latLng: [71.706940, -42.604301],
       name: "Greenland",
       style: {
-        fill: "#bfd0ff"
+        fill: "#e0e7fd"
       }
     },
     {
       latLng: [-21.943369, 123.102198],
       name: "Australia",
       style: {
-        fill: "#3066ff"
+        fill: "#e0e7fd"
       }
     }
   ],
   series: {
     regions: [{
         values: {
-            "AU": '#bfd0ff',
-            "US": '#a2bafd',
-            "GL": '#688df7',
+            "AU": '#0dc8de',
+            "US": '#ff5560',
+            "GL": '#ffb822',
         },
         attribute: 'fill'
     }]

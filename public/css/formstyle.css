@@ -1,0 +1,23 @@
+.page-title{
+	text-transform: uppercase;
+}
+.card{
+	margin:30px;
+}
+.paragraph{
+	background-color: #fff;
+	height: 100px;
+	width: 100%;
+}
+footer{
+	background-color: #181b2c;
+}
+.topbar .topbar-left{
+	background-color: #181b2c;
+}
+.navbar-custom{
+	background-color: #181b2c;
+}
+.font-16{
+	color: #ffff;
+}

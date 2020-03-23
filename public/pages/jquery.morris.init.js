@@ -20,8 +20,7 @@
         ykeys: ykeys,
         labels: labels,
         hideHover: 'auto',
-        gridLineColor:'#252e52',
-        gridTextColor: '#7a88af',
+        gridLineColor: '#dbe5ec',
         resize: true, //defaulted to true
         lineColors: lineColors
       });
@@ -39,8 +38,7 @@
           labels: labels,
           resize: true,
           hideHover: 'auto',
-          gridLineColor:'#252e52',
-          gridTextColor: '#7a88af',
+          gridLineColor: '#dbe5ec',
           lineColors: lineColors
       });
   },
@@ -52,8 +50,7 @@
           xkey: xkey,
           ykeys: ykeys,
           labels: labels,
-          gridLineColor:'#252e52',
-          gridTextColor: '#7a88af',
+          gridLineColor: '#dbe5ec',
           barSizeRatio: 0.4,
           resize: true,
           hideHover: 'auto',
@@ -67,8 +64,7 @@
           data: data,
           resize: true,
           colors: colors,
-          labelColor: '#b9c2d6',
-          backgroundColor: 'transparent',
+          labelColor:"#464457",
       });
   },
   
@@ -110,7 +106,7 @@
           {y: '2015', a: 100, b: 90},
           {y: '2016', a: 90, b: 75}
       ];
-      this.createBarChart('morris-bar-example', $barData, 'y', ['a', 'b'], ['Series A', 'Series B'], ['#4d79f6', '#394b7b']);
+      this.createBarChart('morris-bar-example', $barData, 'y', ['a', 'b'], ['Series A', 'Series B'], ['#4d79f6', '#ccd8fc']);
 
       //creating donut chart
       var $donutData = [
@@ -118,7 +114,7 @@
           {label: "In-Store Sales", value: 30},
           {label: "Mail-Order Sales", value: 20,}
       ];
-      this.createDonutChart('morris-donut-example', $donutData, ['#394b7b', '#4d79f6', '#4ac7ec']);
+      this.createDonutChart('morris-donut-example', $donutData, ['#ccd8fc', '#4d79f6', '#4ac7ec']);
   },
   //init
   $.MorrisCharts = new MorrisCharts, $.MorrisCharts.Constructor = MorrisCharts

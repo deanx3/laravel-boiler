@@ -14,6 +14,16 @@ var options = {
     toolbar: {
       show: false
     },
+    dropShadow: {
+      enabled: true,
+      top: 0,
+      left: 5,
+      bottom: 5,
+      right: 0,
+      blur: 5,
+      color: '#b6c2e4',
+      opacity: 0.35
+  },
   },
   plotOptions: {
     bar: {
@@ -21,13 +31,13 @@ var options = {
       endingShape: 'rounded'
     }
   },
-  colors: ['#4d79f6', '#4d79f6'],
+  colors: ['#0e5cff', '#0e5cff'],
   dataLabels: {
     enabled: false
   },
   stroke: {
     width: 3,
-    colors: ['#2d375f'],
+    colors: ['#c0cdf1'],
   },
   series: [{
     name: 'Task Done',
@@ -35,7 +45,7 @@ var options = {
   }],
   grid: {
     row: {
-      colors: ['#202846', '#1a203a']
+      colors: ['#fff', '#f7f8f9']
     }
   },
   xaxis: {
@@ -50,11 +60,11 @@ var options = {
     ],
     axisBorder: {
       show: true,
-      color: '#28365f',
+      color: '#bec7e0',
     },  
     axisTicks: {
       show: true,
-      color: '#28365f',
+      color: '#bec7e0',
     },    
   },
   yaxis: {
@@ -67,19 +77,17 @@ var options = {
   fill: {
     type: 'gradient',
     gradient: {
-      shade: 'light',
+      shade: '#601f95',
       type: "horizontal",
-      shadeIntensity: 0.25,
-      gradientToColors: undefined,
+      shadeIntensity: 0.5,
+      gradientToColors: ['#82aaff'],
       inverseColors: true,
-      opacityFrom: 0.85,
-      opacityTo: 0.85,
-      stops: [50, 0, 100]
+      opacityFrom: 1,
+      opacityTo: 1,
+      stops: [0, 80, 100],
+      colorStops: [],
     },
   },
-  tooltip: {
-    theme: "dark",      
-  }
 
 }
 

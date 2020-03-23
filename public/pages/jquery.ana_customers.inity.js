@@ -10,14 +10,16 @@ var options = {
   chart: {
     height: 374,
     type: 'line',
-    shadow: {
-      enabled: false,
-      color: '#bbb',
-      top: 3,
-      left: 2,
-      blur: 3,
-      opacity: 1
-    },
+    dropShadow: {
+      enabled: true,
+      top: 12,
+      left: 0,
+      bottom: 5,
+      right: 0,
+      blur: 2,
+      color: '#8997bd',
+      opacity: 0.1
+  },
   },
   stroke: {
     width: 5,
@@ -32,11 +34,11 @@ var options = {
     categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001', '4/11/2001', '5/11/2001', '6/11/2001'],
     axisBorder: {
       show: true,
-      color: '#28365f',
+      color: '#bec7e0',
     },  
     axisTicks: {
       show: true,
-      color: '#28365f',
+      color: '#bec7e0',
     },    
   },
   fill: {
@@ -75,9 +77,6 @@ var options = {
       opacity: 0.2
     },
     borderColor: '#185a9d'
-  },
-  tooltip: {
-    theme: "dark",
   },
   responsive: [{
     breakpoint: 600,

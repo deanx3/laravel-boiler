@@ -18,6 +18,16 @@ var options = {
     chart: {
       type: 'radialBar',
       height: 300,
+      dropShadow: {
+        enabled: true,
+        top: 5,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 5,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
     },
     plotOptions: {
       radialBar: {
@@ -27,8 +37,7 @@ var options = {
         hollow: {
           margin: 5,
           size: '50%',
-          background: 'transparent',
-  
+          background: 'transparent',  
         },
         track: {
           show: false,
@@ -39,12 +48,13 @@ var options = {
           },
           value: {
               fontSize: '16px',
-              color: '#b9c2d6',
-          },          
+              color: '#50649c',
+          },
+          
         }
       },
     },
-    colors: ['#4d79f6', '#4ac7ec', '#f3c74d'],
+    colors: ['#1ecab8', '#fd3c97', '#6d81f5'],
     stroke: {
       lineCap: 'round'
     },
@@ -97,10 +107,10 @@ var options = {
         xkey: 'y', 
         ykeys: [ 'a', 'b', 'c'], 
         labels: ['Total', 'Used', 'Target'], 
-        barColors: ['#4d79f6', '#4ac7ec', '#394b7b'], 
+        barColors: ["#2c77f4", "#1ecab8", '#f3cd6d'], 
         hideHover: 'auto',
         preUnits: "$", 
-        gridLineColor: '#283158', 
+        gridLineColor: '#d2d6e6', 
         gridTextColor: '#8997bd',
         resize: true,
     }
@@ -152,9 +162,9 @@ Morris.Donut({
     {label: "P2", value: 230}
   ],
   resize: true,
-  colors:[ '#394b7b', '#ff5da0', '#2b55cc'], 
-  labelColor: '#b9c2d6',
+  colors:[ '#1ecab8', '#fd3c97', '#6d81f5'], 
+  labelColor: '#50649c',
   backgroundColor: 'transparent',
-  fillOpacity: 0.1,  
+  fillOpacity: 0.1,
   formatter: function (x) { return x + "h"}
 });

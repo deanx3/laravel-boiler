@@ -148,8 +148,8 @@
           verticalbuttons: true,
           verticalupclass: 'ion-plus-round',
           verticaldownclass: 'ion-minus-round',
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
 
       $("input[name='demo1']").TouchSpin({
@@ -160,8 +160,8 @@
           boostat: 5,
           maxboostedstep: 10,
           postfix: '%',
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
       $("input[name='demo2']").TouchSpin({
           min: -1000000000,
@@ -169,33 +169,33 @@
           stepinterval: 50,
           maxboostedstep: 10000000,
           prefix: '$',
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
       $("input[name='demo3']").TouchSpin({
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
       $("input[name='demo3_21']").TouchSpin({
           initval: 40,
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
       $("input[name='demo3_22']").TouchSpin({
           initval: 40,
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
 
       $("input[name='demo5']").TouchSpin({
           prefix: "pre",
           postfix: "post",
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });
       $("input[name='demo0']").TouchSpin({
-          buttondown_class: 'btn btn-primary',
-          buttonup_class: 'btn btn-primary'
+          buttondown_class: 'btn btn-gradient-primary',
+          buttonup_class: 'btn btn-gradient-primary'
       });    
   },
   //init

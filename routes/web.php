@@ -22,16 +22,16 @@ Route::get('/test2', function () {
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', 'HomeController@landingPage');
-
-Route::namespace('Admin')->prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+    Route::get('/', 'HomeController@landingPage');
+    Route::resource('/company', 'CompanyController');
+    Route::namespace('Admin')->prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', 'AdminController@index')->name('admin');
-    Route::get('/orders', 'AdminController@orders');
+  
     Route::resource('/client', 'ClientController');
     // Route::get('/client/invoice', 'ClientController@invoice');
     Route::resource('employ', 'EmployController');
     Route::resource('product', 'ProductController');
-    Route::resource('/discountVoucher', 'discountVoucherController');
+
     
 });
 Route::get('/dashboard', 'OrderController@dashboard')->middleware(['auth']);

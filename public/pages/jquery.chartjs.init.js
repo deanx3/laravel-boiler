@@ -87,7 +87,7 @@
             },
             legend : {
                 labels : {
-                  fontColor : '#aeb4ce'  
+                  fontColor : '#50649c'  
                 }
             },   
             scales: {
@@ -98,21 +98,21 @@
                     //     labelString: 'Month'
                     // },
                     gridLines: {
-                        color: "#20294a"
+                        color: "#eaf0f7"
                     },
                     ticks: {
-                        fontColor: '#7a88af'
+                        fontColor: '#a4abc5'
                     }
                 }],
                 yAxes: [{
                     gridLines: {
-                        color: "#20294a",                        
+                        color: "#eaf0f7",                        
                     },
                     ticks: {
                         max: 100,
                         min: -100,
                         stepSize: 20,
-                        fontColor: '#7a88af'
+                        fontColor: '#a4abc5'
                     }
                 }]
             }
@@ -135,7 +135,7 @@
                     backgroundColor: [
                         "#f7931a",
                         "#4d79f6",
-                        "#aeb4ce",
+                        "#e0e7fd",
                         "#1c75bc",
                     ],
                     borderColor: "transparent",
@@ -143,7 +143,7 @@
                     hoverBackgroundColor: [
                         "#f7931a",
                         "#4d79f6",
-                        "#aeb4ce",
+                        "#e0e7fd",
                         "#1c75bc",
                     ],
                     hoverBorderColor: "transparent",
@@ -157,7 +157,7 @@
             cutoutPercentage: 80,
             legend : {
                 labels : {
-                  fontColor : '#aeb4ce'  
+                  fontColor : '#50649c'  
                 }
             }    
         };
@@ -181,23 +181,23 @@
                     backgroundColor: [
                         "#4d79f6",
                         "#ff5da0",
-                        "#394b7b",
+                        "#e0e7fd",
                         "#4ac7ec",
                     ],
                     borderColor: "transparent",
                     hoverBackgroundColor: [
                         "#4d79f6",
                         "#ff5da0",
-                        "#394b7b",
+                        "#e0e7fd",
                         "#4ac7ec",
                     ],
-                    hoverBorderColor: "#1c233f"
+                    hoverBorderColor: "#ffffff"
                 }]
         };
         var pieChartOpts = {  
             legend : {
                 labels : {
-                  fontColor : '#aeb4ce'  
+                  fontColor : '#50649c'  
                 }
             }      
         };
@@ -225,7 +225,7 @@
             responsive: true,
             legend : {
                 labels : {
-                  fontColor : '#aeb4ce'  
+                  fontColor : '#50649c'  
                 }
             },  
             scales: {
@@ -235,18 +235,18 @@
                         categoryPercentage: 0.4,
                         display: true,
                         gridLines: {
-                            color: "#20294a"
+                            color: "#eaf0f7"
                         },
                         ticks: {
-                            fontColor: '#7a88af'
+                            fontColor: '#a4abc5'
                         }
                     }],
                     yAxes: [{
                         gridLines: {
-                            color: "#20294a",                        
+                            color: "#eaf0f7",                        
                         },
                         ticks: {                           
-                            fontColor: '#7a88af'
+                            fontColor: '#a4abc5'
                         }
                     }]
             }
@@ -284,22 +284,22 @@
         var radarOpts = { 
             legend : {
                 labels : {
-                  fontColor : '#aeb4ce'  
+                  fontColor : '#50649c'  
                 }
             },           
             scale: {                
                 gridLines: {
-                  color: '#20294a'
+                  color: '#eaf0f7'
                 },
                 angleLines: {
-                  color: '#20294a' // lines radiating from the center
+                  color: '#eaf0f7' // lines radiating from the center
                 },
                 pointLabels:{
-                    fontColor:"#7a88af",
+                    fontColor:"#a4abc5",
                  },
                 ticks: {
-                    backdropColor: '#7081b9',
-                    fontColor: '#aeb4ce',
+                    backdropColor: '#e0e7fd',
+                    fontColor: '#50649c',
                     beginAtZero: true,
                     fontSize: 10,
                   }      
@@ -319,12 +319,12 @@
                 backgroundColor: [
                     "#4d79f6",
                     "#ff5da0",
-                    "#394b7b",
+                    "#e0e7fd",
                     "#4ac7ec",
                 ],
                 borderColor: "transparent",
                 label: 'My dataset', // for legend
-                hoverBorderColor: "#1c233f"
+                hoverBorderColor: "#ffffff"
             }],
             labels: [
                 "Series 1",
@@ -336,15 +336,15 @@
         var polarAreaOpts = {  
             legend : {
                 labels : {
-                  fontColor : '#aeb4ce'  
+                  fontColor : '#50649c'  
                 }
             },        
             scale: {                
                 gridLines: {
-                  color: '#20294a'
+                  color: '#eaf0f7'
                 },
                 angleLines: {
-                  color: '#20294a' // lines radiating from the center
+                  color: '#eaf0f7' // lines radiating from the center
                 }
               }            
         };
@@ -359,6 +359,5 @@ function($) {
     "use strict";
     $.ChartJs.init()
 }(window.jQuery);
-
 
 

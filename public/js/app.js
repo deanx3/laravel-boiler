@@ -14,13 +14,28 @@
             height: 'auto',
             position: 'right',
             size: "7px",
-            color: '#7681ad',
+            color: '#e0e5f1',
+            opacity: 1,
             wheelStep: 5,
             touchScrollStep: 50
         });
     }
 
    
+    function initMetisMenu() {
+        //metis menu
+        $(".metismenu").metisMenu();
+    }
+
+    function initLeftMenuCollapse() {
+        // Left menu collapse
+        $('.button-menu-mobile').on('click', function (event) {
+            event.preventDefault();
+            $("body").toggleClass("enlarge-menu");
+            initSlimscroll();
+        });
+    }
+
     function initEnlarge() {
         if ($(window).width() < 1025) {
             $('body').addClass('enlarge-menu');
@@ -30,40 +45,40 @@
         }
     }
 
+    function initTooltipPlugin(){
+        $.fn.tooltip && $('[data-toggle="tooltip"]').tooltip()        
+    }
+    
+    
 
-    function initMainIconMenu() {
-        $(".navigation-menu a").each(function () {
+    function initActiveMenu() {
+        // === following js will activate the menu in left side bar based on url ====
+        $(".left-sidenav a").each(function () {
             var pageUrl = window.location.href.split(/[?#]/)[0];
-            if (this.href == pageUrl) {
-                $(this).parent().addClass("active"); // add active to li of the current link
-                $(this).parent().parent().parent().addClass("active"); // add active class to an anchor
-                $(this).parent().parent().parent().parent().parent().addClass("active"); // add active class to an anchor
+            if (this.href == pageUrl) { 
+                $(this).addClass("active");                
+                $(this).parent().addClass("active"); // add active to li of the current link                 
+                $(this).parent().parent().addClass("in");
+                $(this).parent().parent().addClass("mm-show");
+                $(this).parent().parent().parent().addClass("mm-active");
+                $(this).parent().parent().prev().addClass("active"); // add active class to an anchor
+                $(this).parent().parent().parent().addClass("active");
+                $(this).parent().parent().parent().parent().addClass("mm-show"); // add active to li of the current link                
+                $(this).parent().parent().parent().parent().parent().addClass("mm-active");
+                
             }
         });
     }
 
-    function initTopbarMenu() {
-        $('.navbar-toggle').on('click', function (event) {
-            $(this).toggleClass('open');
-            $('#navigation').slideToggle(400);
-        });
-
-        $('.navigation-menu>li').slice(-2).addClass('last-elements');
-
-        $('.navigation-menu li.has-submenu a[href="#"]').on('click', function (e) {
-            if ($(window).width() < 992) {
-                e.preventDefault();
-                $(this).parent('li').toggleClass('open').find('.submenu:first').toggleClass('open');
-            }
-        });
-    }
     
 
     function init() {
         initSlimscroll();
+        initMetisMenu();
+        initLeftMenuCollapse();
         initEnlarge();
-        initMainIconMenu();
-        initTopbarMenu();
+        initTooltipPlugin();
+        initActiveMenu();
         Waves.init();
     }
 

@@ -66,16 +66,10 @@
             yaxis: {
                 min: 0,
                 max: 15,
-                color: '#252e52',
-                font : {
-                  color : '#7a88af'
-                }
+                color: 'rgba(0,0,0,0.1)'
             },
             xaxis: {
-                color: '#252e52',
-                font : {
-                  color : '#7a88af'
-                }
+                color: 'rgba(0,0,0,0.1)'
             },
             tooltip: true,
             tooltipOpts: {
@@ -201,13 +195,10 @@
     yaxis : {
       min : 0,
       max : 100,
-      color : '#252e52',
-      font : {
-        color : '#7a88af'
-      }
+      color : 'rgba(0,0,0,0.1)'
     },
     xaxis : {
-      show : false,
+      show : false
     }
       });
 
@@ -271,14 +262,14 @@
         var downloads = [[0, 5], [1, 12], [2,4], [3, 3], [4, 12], [5, 8], [6, 4]];
         var plabels = ["Marketplace","Other Market"];
         var pcolors = ['#4d79f6', '#6171a5'];
-        var borderColor = '#252e52';
-        var bgColor = '#1c233f';
+        var borderColor = '#f5f5f5';
+        var bgColor = '#fff';
         this.createPlotGraph("#website-stats", uploads, downloads, plabels, pcolors, borderColor, bgColor);
 
         //Pie graph data
         var pielabels = ["Marketplace","Other Market","Direct Sales"];
         var datas = [20,30, 15];
-        var colors = ['#4d79f6', '#4ac7ec', '#394b7b'];
+        var colors = ['#4d79f6', '#4ac7ec', "#f3c74d"];
         this.createPieGraph("#pie-chart #pie-chart-container", pielabels , datas, colors);
 
 
@@ -297,7 +288,7 @@
           //Donut pie graph data
         var donutlabels = ["Marketplace","Other Market","Direct Sales"];
         var donutdatas = [29,20, 18];
-        var donutcolors = [ '#394b7b', '#ff5da0', '#2b55cc'];
+        var donutcolors = ['#4d79f6', '#ff5da0', "#f0f1f4"];
         this.createDonutGraph("#donut-chart #donut-chart-container", donutlabels , donutdatas, donutcolors);
       },
 

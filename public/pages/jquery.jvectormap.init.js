@@ -20,7 +20,7 @@
     hoverColor : false,
     regionStyle : {
       initial : {
-        fill : '#7984ab'
+        fill : '#3f7dff'
       }
     },
      markerStyle: {
@@ -29,14 +29,14 @@
                   'fill': '#4d79f6',
                   'fill-opacity': 0.9,
                   'stroke': '#fff',
-                  'stroke-width' : 4,
+                  'stroke-width' : 7,
                   'stroke-opacity': 0.4
               },
 
               hover: {
                   'stroke': '#fff',
                   'fill-opacity': 1,
-                  'stroke-width': 1
+                  'stroke-width': 1.5
               }
           },
     backgroundColor : 'transparent',
@@ -67,25 +67,25 @@
       $('#usa').vectorMap({map: 'us_aea_en',backgroundColor: 'transparent',
                 regionStyle: {
                   initial: {
-                    fill: '#7984ab'
+                    fill: '#e0504f'
                   }
         }});
   $('#canada').vectorMap({map : 'ca_lcc',backgroundColor : 'transparent',
         regionStyle : {
           initial : {
-            fill : '#7984ab'
+            fill : '#ffd862'
           }
         }});
       $('#uk').vectorMap({map: 'uk_mill_en',backgroundColor: 'transparent',
         regionStyle: {
           initial: {
-            fill: '#7984ab'
+            fill: '#75439a'
           }
         }});
       $('#chicago').vectorMap({map: 'us-il-chicago_mill_en',backgroundColor: 'transparent',
         regionStyle: {
           initial: {
-            fill: '#7984ab'
+            fill: '#24bce3'
           }
         }});
 

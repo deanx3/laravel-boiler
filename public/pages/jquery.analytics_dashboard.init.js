@@ -13,7 +13,17 @@ var options = {
       type: 'bar',
       toolbar: {
           show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 0,
+        left: 5,
+        bottom: 5,
+        right: 0,
+        blur: 5,
+        color: '#b6c2e4',
+        opacity: 0.35
+    },
   },
   plotOptions: {
       bar: {
@@ -23,15 +33,14 @@ var options = {
       },
   },
   dataLabels: {
-      enabled: false
+      enabled: false,
   },
- 
   stroke: {
       show: true,
       width: 2,
       colors: ['transparent']
   },
-  colors: ["#4d79f6", "#394b7b"],
+  colors: ["#2c77f4", "#1ecab8"],
   series: [{
       name: 'New Visitors',
       data: [68, 44, 55, 57, 56, 61, 58, 63, 60, 66]
@@ -43,11 +52,11 @@ var options = {
       categories: ['Jan','Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
       axisBorder: {
         show: true,
-        color: '#28365f',
+        color: '#bec7e0',
       },  
       axisTicks: {
         show: true,
-        color: '#28365f',
+        color: '#bec7e0',
       },    
   },
   legend: {
@@ -56,11 +65,10 @@ var options = {
   yaxis: {
       title: {
           text: 'Visitors'
-      },      
+      }
   },
   fill: {
-      opacity: 1
-
+      opacity: 1,
   },
   // legend: {
   //     floating: true
@@ -73,7 +81,6 @@ var options = {
       borderColor: '#f1f3fa'
   },
   tooltip: {
-    theme: "dark",   
       y: {
           formatter: function (val) {
               return "" + val + "k"
@@ -98,7 +105,17 @@ var optionsCircle = {
       type: 'radialBar',
       height: 240,
       offsetY: -30,
-      offsetX: 20
+      offsetX: 20,
+      dropShadow: {
+        enabled: true,
+        top: 5,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 5,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
     },
     plotOptions: {
       radialBar: {
@@ -110,10 +127,10 @@ var optionsCircle = {
         },
         track: {
           show: true,
-          background: '#3c4a82',
+          background: '#ddd',
           strokeWidth: '10%',
           opacity: 1,
-          margin: 5, // margin is in pixels
+          margin: 5, // margin is in pixels             
         },
   
         dataLabels: {
@@ -122,8 +139,8 @@ var optionsCircle = {
           },
           value: {
               fontSize: '16px',
-              color: '#b9c2d6',
-          },          
+              color: '#50649c',
+          },
         }
       },
     },
@@ -148,12 +165,11 @@ var optionsCircle = {
         opacityFrom: 1,
         opacityTo: 1,
         stops: [0, 100],
-        gradientToColors: ['#40e0d0', '#ff8c00', '#ff0080']
+        gradientToColors: ["#ffb822", "#5d78ff", "#34bfa3"]
       }
     },
     stroke: {
-      lineCap: 'round',
-      colors: ["#515988"]
+      lineCap: 'round'
     },
   }
   
@@ -194,13 +210,33 @@ var dash_spark_1 = {
       sparkline: {
           enabled: true
       },
+      dropShadow: {
+        enabled: true,
+        top: 12,
+        left: 0,
+        bottom: 5,
+        right: 0,
+        blur: 2,
+        color: '#8997bd',
+        opacity: 0.1
+    },
   },
   stroke: {
       curve: 'smooth',
-      width: 2
+      width: 3
     },
   fill: {
-      opacity: 0.05,
+      opacity: 1,
+      gradient: {
+        shade: '#2c77f4',
+        type: "horizontal",
+        shadeIntensity: 0.5,
+        inverseColors: true,
+        opacityFrom: 0.1,
+        opacityTo: 0.1,
+        stops: [0, 80, 100],
+        colorStops: []
+    },
   },
   series: [{
     data: [4, 8, 5, 10, 4, 16, 5, 11, 6, 11, 30, 10, 13, 4, 6, 3, 6]
@@ -208,10 +244,7 @@ var dash_spark_1 = {
   yaxis: {
       min: 0
   },
-  tooltip: {
-    theme: "dark",
-  },
-  colors: ['#f3c74d'],
+  colors: ['#2c77f4'],
 }
 new ApexCharts(document.querySelector("#dash_spark_1"), dash_spark_1).render();
 
@@ -224,6 +257,16 @@ var options = {
   chart: {
       height: 250,
       type: 'donut',
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.15
+    },
   }, 
   plotOptions: {
     pie: {
@@ -235,11 +278,6 @@ var options = {
   dataLabels: {
     enabled: false,
     },
-    stroke: {
-      show: true,
-      width: 2,
-      colors: ['transparent']
-  },
  
   series: [10, 65, 25,],
   legend: {
@@ -253,7 +291,7 @@ var options = {
       offsetY: -13
   },
   labels: [ "Tablet", "Desktop", "Mobile"],
-  colors: ["#394b7b", "#4d79f6", "#4ac7ec"],
+  colors: ["#34bfa3", "#5d78ff", "#fd3c97"],
  
   responsive: [{
       breakpoint: 600,
@@ -273,7 +311,6 @@ var options = {
   }],
 
   tooltip: {
-    theme: 'dark',
     y: {
         formatter: function (val) {
             return   val + " %"

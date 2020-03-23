@@ -25,7 +25,17 @@
       },
       toolbar: {
         show: false,
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
     },
     plotOptions: {
       line: {
@@ -82,17 +92,16 @@
       type: 'datetime',
       axisBorder: {
         show: true,
-        color: '#28365f',
+        color: '#bec7e0',
       },  
       axisTicks: {
         show: true,
-        color: '#28365f',
-      },  
+        color: '#bec7e0',
+      },    
     },
   
     tooltip: {
       shared: false,
-      theme: 'dark',
       y: {
         formatter: function (val) {
           return '$' + (val / 1000000).toFixed(0)

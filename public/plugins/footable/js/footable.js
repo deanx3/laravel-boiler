@@ -4038,7 +4038,7 @@
 
 			self.$input = $('<input/>', {type: 'text', 'class': 'form-control', placeholder: self.placeholder});
 
-			self.$button = $('<button/>', {type: 'button', 'class': 'btn btn-primary'})
+			self.$button = $('<button/>', {type: 'button', 'class': 'btn btn-gradient-primary'})
 				.on('click', { self: self }, self._onSearchButtonClicked)
 				.append($('<span/>', {'class': 'fooicon fooicon-search'}));
 
@@ -6334,7 +6334,7 @@
 		 * @returns {(string|HTMLElement|jQuery)}
 		 */
 		$buttonShow: function(){
-			return '<button type="button" class="btn btn-primary footable-show">' + this.showText + '</button>';
+			return '<button type="button" class="btn btn-gradient-primary footable-show">' + this.showText + '</button>';
 		},
 		/**
 		 * Creates the hide button for the editing component.
@@ -6343,7 +6343,7 @@
 		 * @returns {(string|HTMLElement|jQuery)}
 		 */
 		$buttonHide: function(){
-			return '<button type="button" class="btn btn btn-danger footable-hide">' + this.hideText + '</button>';
+			return '<button type="button" class="btn btn btn-gradient-danger footable-hide">' + this.hideText + '</button>';
 		},
 		/**
 		 * Creates the add button for the editing component.
@@ -6352,7 +6352,7 @@
 		 * @returns {(string|HTMLElement|jQuery)}
 		 */
 		$buttonAdd: function(){
-			return '<button type="button" class="btn btn-primary footable-add">' + this.addText + '</button> ';
+			return '<button type="button" class="btn btn-gradient-primary footable-add">' + this.addText + '</button> ';
 		},
 		/**
 		 * Creates the edit button for the editing component.

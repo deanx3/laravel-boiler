@@ -22,7 +22,6 @@ var options = {
         background: "#293450"
       },
       track: {
-        background: '#394b7b',
         dropShadow: {
           enabled: true,
           top: 2,
@@ -52,7 +51,7 @@ var options = {
       shade: 'dark',
       type: 'horizontal',
       shadeIntensity: 0.5,
-      gradientToColors: ["#cba280"],
+      gradientToColors: ["#cba280", "#2c3e50"],
       inverseColors: true,
       opacityFrom: 1,
       opacityTo: 1,

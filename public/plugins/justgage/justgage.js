@@ -67,7 +67,7 @@ JustGage = function(config) {
 
     // valueFontColor : string
     // color of label showing current value
-    valueFontColor: kvLookup('valueFontColor', config, dataset, "#aeb4ce"),
+    valueFontColor: kvLookup('valueFontColor', config, dataset, "#50649c"),
 
     // valueFontFamily : string
     // color of label showing current value
@@ -116,7 +116,7 @@ JustGage = function(config) {
 
     // gaugeColor : string
     // background color of gauge element
-    gaugeColor: kvLookup('gaugeColor', config, dataset, "#394b7b"),
+    gaugeColor: kvLookup('gaugeColor', config, dataset, "#eff2f9"),
 
     // label : string
     // text to show below value

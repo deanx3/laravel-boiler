@@ -14,7 +14,17 @@ var options = {
       type: 'candlestick',
       toolbar: {
         show: false,
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 12,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.3
+      },
     },
     series: [{
       data: [{
@@ -264,12 +274,12 @@ var options = {
       type: 'datetime',
       axisBorder: {
         show: true,
-        color: '#28365f',
+        color: '#bec7e0',
       },  
       axisTicks: {
         show: true,
-        color: '#28365f',
-      },  
+        color: '#bec7e0',
+      },    
     },
     yaxis: {
         labels: {
@@ -278,12 +288,8 @@ var options = {
             }
         },
         tooltip: {
-          theme: 'dark',
             enabled: true
         }
-    },
-    tooltip: {
-      theme: 'dark',
     }
   }
 

@@ -13,7 +13,7 @@ $(document).ready(function() {
         type: 'pie',
         height: '100',
         resize: true,
-        sliceColors: ['#4d79f6', '#4ac7ec', '#394b7b']
+        sliceColors: ['#4d79f6', '#4ac7ec', '#eff2f9']
       });
   
       $("#sparkline2").sparkline([5,6,2,8,9,4,7,10,11,12,10,4,7,10], {
@@ -100,7 +100,7 @@ $(document).ready(function() {
         width: '100%',
         height: '100',
         boxLineColor: '#4ac7ec',
-        boxFillColor: '#394b7b',
+        boxFillColor: '#f1f1f1',
         whiskerColor: '#4ac7ec',
         outlierLineColor: '#4ac7ec',
         medianColor: '#4ac7ec',

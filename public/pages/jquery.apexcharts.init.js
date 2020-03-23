@@ -10,13 +10,15 @@ var options = {
     chart: {
       height: 374,
       type: 'line',
-      shadow: {
-        enabled: false,
-        color: '#bbb',
-        top: 3,
-        left: 2,
-        blur: 3,
-        opacity: 1
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
       },
     },
     stroke: {
@@ -30,6 +32,14 @@ var options = {
     xaxis: {
       type: 'datetime',
       categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001', '4/11/2001', '5/11/2001', '6/11/2001'],
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+      },    
     },
     title: {
       text: 'Social Media',
@@ -65,6 +75,7 @@ var options = {
     yaxis: {
       min: -10,
       max: 40,
+      floating: true,
       title: {
         text: 'Engagement',
       },
@@ -75,9 +86,6 @@ var options = {
         opacity: 0.2
       },
       borderColor: '#185a9d'
-    },
-    tooltip: {
-        theme: "dark",      
     },
     responsive: [{
       breakpoint: 600,
@@ -112,7 +120,17 @@ var options = {
       },
       toolbar: {
         show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
     },
     colors: ['#f6d365', '#0acf97'],
     dataLabels: {
@@ -148,6 +166,14 @@ var options = {
     },
     xaxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+      },    
       title: {
         text: 'Month'
       }
@@ -165,9 +191,6 @@ var options = {
       floating: true,
       offsetY: -25,
       offsetX: -5
-    },
-    tooltip: {
-        theme: "dark",      
     },
     responsive: [{
       breakpoint: 600,
@@ -210,6 +233,16 @@ var options = {
     zoom: {
       enabled: true
     },
+    dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
     line: {
@@ -267,10 +300,17 @@ var options = {
   },
   xaxis: {
     type: 'datetime',
+    axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+      },    
   },
 
   tooltip: {
-    theme: "dark",
     shared: false,
     y: {
       formatter: function (val) {
@@ -334,6 +374,16 @@ for(var i=0; i<12; i++) {
     zoom: {
       enabled: false
     },
+    dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
     line: {
@@ -395,7 +445,15 @@ for(var i=0; i<12; i++) {
         formatter: function(val, timestamp) {
           return moment(new Date(timestamp)).format("DD MMM YYYY")
       }
-    }
+    },
+    axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+      },    
   },
   title: {
     text: 'Irregular Data in Time Series',
@@ -404,8 +462,7 @@ for(var i=0; i<12; i++) {
   },
   colors: ['#f93b7a', '#00bcd4','#fbb624'],
   tooltip: {
-    shared: true,
-    theme: "dark",
+    shared: true
   },
   legend: {
     position: 'top',
@@ -448,12 +505,22 @@ for(var i=0; i<12; i++) {
                 color: "#fff",
                 background: '#775DD0'
             }
-            }
+        },
         }]
         },
         chart: {
         type: 'area',
         height: 350,
+        dropShadow: {
+            enabled: true,
+            top: 10,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            blur: 2,
+            color: '#b6c2e4',
+            opacity: 0.35
+          },
         },
         dataLabels: {
         enabled: false
@@ -748,10 +815,17 @@ for(var i=0; i<12; i++) {
         type: 'datetime',
         min: new Date('01 Mar 2012').getTime(),
         tickAmount: 6,
+        axisBorder: {
+            show: true,
+            color: '#bec7e0',
+          },  
+          axisTicks: {
+            show: true,
+            color: '#bec7e0',
+          },    
         },
         colors: ['#dfa579'],
         tooltip: {
-            theme: "dark",
         x: {
             format: 'dd MMM yyyy'
         }
@@ -849,7 +923,18 @@ var options = {
         type: 'bar',
         toolbar: {
             show: false
-        }
+        },
+
+        dropShadow: {
+            enabled: true,
+            top: 0,
+            left: 5,
+            bottom: 5,
+            right: 0,
+            blur: 5,
+            color: '#b6c2e4',
+            opacity: 0.35
+        },
     },
     plotOptions: {
         bar: {
@@ -879,6 +964,14 @@ var options = {
     }],
     xaxis: {
         categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        axisBorder: {
+            show: true,
+            color: '#bec7e0',
+          },  
+          axisTicks: {
+            show: true,
+            color: '#bec7e0',
+        },    
     },
     legend: {
         offsetY: -10,
@@ -903,7 +996,6 @@ var options = {
         borderColor: '#f1f3fa'
     },
     tooltip: {
-        theme: "dark",
         y: {
             formatter: function (val) {
                 return "$ " + val + " thousands"
@@ -928,7 +1020,17 @@ var options = {
         type: 'bar',
         toolbar: {
             show: false
-        }
+        },
+        dropShadow: {
+            enabled: true,
+            top: 0,
+            left: 5,
+            bottom: 5,
+            right: 0,
+            blur: 5,
+            color: '#b6c2e4',
+            opacity: 0.35
+        },
     },
     plotOptions: {
         bar: {
@@ -945,7 +1047,7 @@ var options = {
         offsetY: -20,
         style: {
             fontSize: '12px',
-            colors: ["#aeb4ce"]
+            colors: ["#304758"]
         }
     },
     colors: ["#4facfe"],
@@ -981,7 +1083,7 @@ var options = {
         tooltip: {
             enabled: true,
             offsetY: -35,
-            theme: "dark",
+
         }
     },
     fill: {
@@ -1018,19 +1120,16 @@ var options = {
         offsetY: 350,
         align: 'center',
         style: {
-            color: '#aeb4ce'
+            color: '#444'
         }
     },
     grid: {
         row: {
-            colors: ['#202846', '#1a203a'], // takes an array which will be repeated on columns
+            colors: ['#f1f3fa', 'transparent'], // takes an array which will be repeated on columns
             opacity: 0.2
         },
         borderColor: '#f1f3fa'
-    },
-    tooltip: {
-        theme: "dark",      
-    },
+    }
 }
 
 var chart = new ApexCharts(
@@ -1050,7 +1149,17 @@ var options = {
         type: 'bar',
         toolbar: {
             show: false
-        }
+        },
+        dropShadow: {
+            enabled: true,
+            top: 5,
+            left: 5,
+            bottom: 0,
+            right: 0,
+            blur: 5,
+            color: '#b6c2e4',
+            opacity: 0.35
+        },
     },
     plotOptions: {
         bar: {
@@ -1064,8 +1173,18 @@ var options = {
         data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
     }],
     colors: ["#95a6bf"],
+    yaxis: {
+        axisBorder: {
+            show: true,
+            color: '#bec7e0',
+          },  
+          axisTicks: {
+            show: true,
+            color: '#bec7e0',
+        }, 
+    },
     xaxis: {
-        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
+        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],        
     },
     states: {
         hover: {
@@ -1074,10 +1193,7 @@ var options = {
     },
     grid: {
         borderColor: '#f1f3fa'
-    },
-    tooltip: {
-        theme: "dark",      
-    },
+    }
 }
 
 var chart = new ApexCharts(
@@ -1097,7 +1213,17 @@ var options = {
         stacked: true,
         toolbar: {
             show: false
-        }
+        },
+        dropShadow: {
+            enabled: true,
+            top: 5,
+            left: 5,
+            bottom: 0,
+            right: 0,
+            blur: 5,
+            color: '#b6c2e4',
+            opacity: 0.35
+        },
     },
     colors: ['#ffab96','#185a9d'],
     plotOptions: {
@@ -1133,10 +1259,17 @@ var options = {
         title: {
            // text: 'Age',
         },
+        axisBorder: {
+            show: true,
+            color: '#bec7e0',
+          },  
+          axisTicks: {
+            show: true,
+            color: '#bec7e0',
+        }, 
     },
     tooltip: {
         shared: false,
-        theme: "dark", 
         x: {
             formatter: function(val) {
                 return val
@@ -1150,6 +1283,7 @@ var options = {
     },
     xaxis: {
       categories: ['85+', '80-84', '75-79', '70-74', '65-69', '60-64', '55-59', '50-54', '45-49', '40-44', '35-39', '30-34', '25-29', '20-24', '15-19', '10-14', '5-9', '0-4'],
+      
       title: {
           text: 'Percent'
       },
@@ -1184,7 +1318,17 @@ var options = {
       stacked: false,
       toolbar: {
           show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   stroke: {
       width: [0, 2, 4],
@@ -1228,7 +1372,15 @@ var options = {
       offsetY: -10,
   },
   xaxis: {
-      type: 'datetime'
+      type: 'datetime',
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: {
       title: {
@@ -1238,7 +1390,6 @@ var options = {
   tooltip: {
       shared: true,
       intersect: false,
-      theme: "dark", 
       y: {
           formatter: function (y) {
               if (typeof y !== "undefined") {
@@ -1271,7 +1422,17 @@ var options = {
       stacked: false,
       toolbar: {
           show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   dataLabels: {
       enabled: false
@@ -1295,6 +1456,14 @@ var options = {
   colors: ["#20016c", "#77d0ba", "#fa5c7c"],
   xaxis: {
       categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: [
       {
@@ -1354,8 +1523,7 @@ var options = {
 
   ],
   tooltip: {
-        theme: "dark", 
-        followCursor: true,
+      followCursor: true,
       y: {
           formatter: function (y) {
               if (typeof y !== "undefined") {
@@ -1400,7 +1568,17 @@ var options = {
       type: 'line',
       toolbar: {
           show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   stroke: {
       curve: 'smooth',
@@ -1427,6 +1605,16 @@ var options = {
       offsetY: -10,
   },
   colors: ["#30a6d3", "#f7cda0"],
+  xaxis: {
+    axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
+  },
   yaxis: [
       {
           title: {
@@ -1443,7 +1631,6 @@ var options = {
   tooltip: {
       shared: true,
       intersect: false,
-      theme: "dark", 
       y: {
           formatter: function (y) {
               if (typeof y !== "undefined") {
@@ -1505,7 +1692,17 @@ var options = {
       type: 'bubble',
       toolbar: {
           show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   dataLabels: {
       enabled: false
@@ -1542,6 +1739,14 @@ var options = {
   xaxis: {
       tickAmount: 12,
       type: 'category',
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: {
       max: 70
@@ -1551,10 +1756,7 @@ var options = {
   },
   legend: {
       offsetY: -10,
-  },
-  tooltip: {
-    theme: "dark",      
-    },
+  }
 }
 
 var chart = new ApexCharts(
@@ -1598,7 +1800,17 @@ var options2 = {
       type: 'bubble',
       toolbar: {
           show: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   dataLabels: {
       enabled: false
@@ -1642,7 +1854,15 @@ var options2 = {
 
       labels: {
           rotate: 0,
-      }
+      },
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: {
       max: 70
@@ -1652,10 +1872,7 @@ var options2 = {
   },
   grid: {
       borderColor: '#f1f3fa'
-  },
-  tooltip: {
-    theme: "dark",      
- },
+  }
 }
 
 var chart = new ApexCharts(
@@ -1676,7 +1893,17 @@ var options = {
       type: 'scatter',
       zoom: {
           enabled: false
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
 
   series: [{
@@ -1694,6 +1921,14 @@ var options = {
   }],
   xaxis: {
       tickAmount: 10,
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: {
       tickAmount: 7
@@ -1705,9 +1940,6 @@ var options = {
   legend: {
       offsetY: -10,
   },
-  tooltip: {
-    theme: "dark",      
- },
   responsive: [{
       breakpoint: 600,
       options: {
@@ -1739,7 +1971,17 @@ var options = {
       type: 'scatter',
       zoom: {
           type: 'xy'
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   series: [{
       name: 'Team 1',
@@ -1795,14 +2037,18 @@ var options = {
   },
   xaxis: {
       type: 'datetime',
-
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: {
       max: 70
   },
-  tooltip: {
-    theme: "dark",      
-    },
   responsive: [{
       breakpoint: 600,
       options: {
@@ -1860,6 +2106,16 @@ var options = {
   chart: {
       height: 400,
       type: 'candlestick',
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
     candlestick: {
@@ -1879,14 +2135,19 @@ stroke: {
   width: [1,4]    
 },
   xaxis: {
-      type: 'datetime'
+      type: 'datetime',
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   grid: {
     borderColor: '#f1f3fa'
-},
-tooltip: {
-    theme: "dark",      
-},
+}
 }
 
 var chart = new ApexCharts(
@@ -1908,6 +2169,16 @@ var optionsCandlestick = {
       zoom: {
           enabled: false
       },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   series: [{
       data: seriesData
@@ -1921,14 +2192,19 @@ var optionsCandlestick = {
     }
   },
   xaxis: {
-      type: 'datetime'
+      type: 'datetime',
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   grid: {
     borderColor: '#f1f3fa'
-},
-tooltip: {
-    theme: "dark",      
-},
+}
 }
 
 var chartCandlestick = new ApexCharts(
@@ -1945,6 +2221,16 @@ var options = {
       toolbar: {
           show: false,
           autoSelected: 'selection'
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
       },
       selection: {
           xaxis: {
@@ -2001,7 +2287,15 @@ var options = {
       type: 'datetime',
       axisBorder: {
           offsetX: 13
-      }
+      },
+      axisBorder: {
+        show: true,
+        color: '#bec7e0',
+      },  
+      axisTicks: {
+        show: true,
+        color: '#bec7e0',
+    }, 
   },
   yaxis: {
       labels: {
@@ -2010,10 +2304,7 @@ var options = {
   },
   grid: {
     borderColor: '#f1f3fa'
-},
-tooltip: {
-    theme: "dark",      
-},
+}
 }
 
 var chart = new ApexCharts(
@@ -2034,12 +2325,17 @@ var options = {
   chart: {
       height: 320,
       type: 'pie',
+      dropShadow: {
+        enabled: true,
+        top: 4,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   }, 
-  stroke: {
-    show: true,
-    width: 2,
-    colors: ['transparent']
- },
   series: [44, 55, 41, 17, 15],
   labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
   colors: ["#a3cae0", "#232f5b","#f06a6c", "#f1e299", "#08aeb0"],
@@ -2053,12 +2349,6 @@ var options = {
       offsetX: 0,
       offsetY: -10
   },
-  tooltip: {
-    theme: "dark", 
-    style: {
-        color: '#fff',
-    }     
- },
   responsive: [{
       breakpoint: 600,
       options: {
@@ -2086,6 +2376,16 @@ var options = {
   chart: {
       height: 320,
       type: 'donut',
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   }, 
   series: [44, 55, 41, 17, 15],
   legend: {
@@ -2098,11 +2398,6 @@ var options = {
       offsetX: 0,
       offsetY: -10
   },
-  stroke: {
-    show: true,
-    width: 2,
-    colors: ['transparent']
- },
   labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
   colors: ["#a3cae0", "#232f5b","#f06a6c", "#f1e299", "#08aeb0"],
   responsive: [{
@@ -2135,18 +2430,19 @@ chart.render();
         height: 320,
         type: 'donut',
         dropShadow: {
-          enabled: true,
-          color: '#111',
-          top: -1,
-          left: 3,
-          blur: 3,
-          opacity: 0.2
-        }
+            enabled: true,
+            top: 10,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            blur: 2,
+            color: '#b6c2e4',
+            opacity: 0.35
+          },
     },
     stroke: {
         show: true,
         width: 2,
-        colors: ['#28365f']
     },
     series: [44, 55, 41, 17, 15],
     colors: ["#a3cae0", "#232f5b","#f06a6c", "#f1e299", "#08aeb0"],
@@ -2206,6 +2502,16 @@ chart.render();
     chart: {
         height: 320,
         type: 'pie',
+        dropShadow: {
+            enabled: true,
+            top: 10,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            blur: 2,
+            color: '#b6c2e4',
+            opacity: 0.35
+        },
     },
     labels: ["Series 1", "Series 2", "Series 3", "Series 4"],
     colors: ["#39afd1", "#ffbc00", "#727cf5", "#0acf97"],
@@ -2220,8 +2526,7 @@ chart.render();
         },
     },
     stroke: {
-        width: 2,
-        colors: ['#28365f']
+        width: 4
     },
     dataLabels: {
         enabled: false
@@ -2265,30 +2570,21 @@ var options = {
   chart: {
       height: 320,
       type: 'radialBar',
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       radialBar: {
           hollow: {
               size: '70%',
-          },
-          track: {
-            background: '#394b7b',
-            dropShadow: {
-              enabled: true,
-              top: 2,
-              left: 0,
-              blur: 4,
-              opacity: 0.15
-            }
-          },
-          dataLabels: {
-            name: {
-                fontSize: '18px',
-            },
-            value: {
-                fontSize: '16px',
-                color: '#b9c2d6',
-            },          
           }
       },
   },
@@ -2313,20 +2609,26 @@ var options = {
   chart: {
       height: 350,
       type: 'radialBar',
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       radialBar: {
-            track: {
-                background: '#394b7b',            
-            },
           dataLabels: {
-            name: {
-                fontSize: '18px',
-            },
-            value: {
-                fontSize: '16px',
-                color: '#b9c2d6',
-            },  
+              name: {
+                  fontSize: '22px',
+              },
+              value: {
+                  fontSize: '16px',
+              },
               total: {
                   show: true,
                   label: 'Total',
@@ -2358,24 +2660,31 @@ var options = {
   chart: {
       height: 380,
       type: 'radialBar',
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       radialBar: {
           startAngle: -135,
           endAngle: 135,
-          track: {
-            background: '#394b7b',            
-         },
           dataLabels: {
               name: {
-                  fontSize: '18px',
+                  fontSize: '16px',
                   color: undefined,
                   offsetY: 120
               },
               value: {
                   offsetY: 76,
-                  fontSize: '16px',
-                  color: '#b9c2d6',
+                  fontSize: '22px',
+                  color: undefined,
                   formatter: function (val) {
                       return val + "%";
                   }
@@ -2429,7 +2738,17 @@ var options = {
     type: 'radialBar',
     toolbar: {
       show: true
-    }
+    },
+    dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
     radialBar: {
@@ -2438,7 +2757,7 @@ var options = {
        hollow: {
         margin: 0,
         size: '70%',
-        background: '#293450',
+        background: '#fff',
         image: undefined,
         imageOffsetX: 0,
         imageOffsetY: 0,
@@ -2452,7 +2771,7 @@ var options = {
         }
       },
       track: {
-        background: '#394b7b',
+        background: '#fff',
         strokeWidth: '67%',
         margin: 0, // margin is in pixels
         dropShadow: {
@@ -2469,14 +2788,14 @@ var options = {
         name: {
           offsetY: -10,
           show: true,
-          color: '#b9c2d6',
+          color: '#888',
           fontSize: '17px'
         },
         value: {
           formatter: function(val) {
             return parseInt(val);
           },
-          color: '#b9c2d6',
+          color: '#111',
           fontSize: '36px',
           show: true,
         }
@@ -2559,6 +2878,16 @@ var spark1 = {
       sparkline: {
           enabled: true
       },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   stroke: {
       width: 2,
@@ -2568,7 +2897,7 @@ var spark1 = {
       opacity: 0.2,
   },
   series: [{
-      name: 'Metrica Sales ',
+      name: 'Frogetor Sales ',
       data: randomizeArray(sparklineData)
   }],
   yaxis: {
@@ -2579,19 +2908,14 @@ var spark1 = {
       text: '$424,652',
       offsetX: 20,
       style: {
-          fontSize: '24px',
-          color: '#aeb4ce'
+          fontSize: '24px'
       }
   },
-  tooltip: {
-    theme: "dark",      
- },
   subtitle: {
       text: 'Sales',
       offsetX: 20,
       style: {
-          fontSize: '14px',
-          color: '#7a88af'
+          fontSize: '14px'
       }
   }
 }
@@ -2604,6 +2928,16 @@ var spark2 = {
       sparkline: {
           enabled: true
       },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   stroke: {
       width: 2,
@@ -2613,7 +2947,7 @@ var spark2 = {
       opacity: 0.2,
   },
   series: [{
-      name: 'Metrica Expenses ',
+      name: 'Frogetor Expenses ',
       data: randomizeArray(sparklineData)
   }],
   yaxis: {
@@ -2624,19 +2958,14 @@ var spark2 = {
       text: '$235,312',
       offsetX: 20,
       style: {
-          fontSize: '24px',
-          color: '#aeb4ce'
+          fontSize: '24px'
       }
   },
-  tooltip: {
-    theme: "dark",      
- },
   subtitle: {
       text: 'Expenses',
       offsetX: 20,
       style: {
-          fontSize: '14px',
-          color: '#7a88af'
+          fontSize: '14px'
       }
   }
 }
@@ -2649,6 +2978,16 @@ var spark3 = {
       height: 160,
       sparkline: {
           enabled: true
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
       },
   },
   stroke: {
@@ -2675,19 +3014,14 @@ var spark3 = {
       text: '$135,965',
       offsetX: 20,
       style: {
-          fontSize: '24px',
-          color: '#aeb4ce'
+          fontSize: '24px'
       }
   },
-  tooltip: {
-    theme: "dark",      
- },
   subtitle: {
       text: 'Profits',
       offsetX: 20,
       style: {
-          fontSize: '14px',
-          color: '#7a88af'
+          fontSize: '14px'
       }
   }
 }
@@ -2701,7 +3035,17 @@ var options1 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   series: [{
       data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]
@@ -2715,7 +3059,6 @@ var options1 = {
   },
   colors: ["#727cf5"],
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -2742,7 +3085,17 @@ var options2 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   colors: ["#0acf97"],
   series: [{
@@ -2756,7 +3109,6 @@ var options2 = {
       size: 0
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -2783,7 +3135,17 @@ var options3 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   colors: ["#ffbc00"],
   series: [{
@@ -2797,7 +3159,6 @@ var options3 = {
       size: 0
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -2824,7 +3185,17 @@ var options4 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   colors: ["#fa5c7c"],
   series: [{
@@ -2838,7 +3209,6 @@ var options4 = {
       size: 0
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -2865,7 +3235,17 @@ var options5 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       bar: {
@@ -2883,7 +3263,6 @@ var options5 = {
       },
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -2910,7 +3289,17 @@ var options6 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       bar: {
@@ -2928,7 +3317,6 @@ var options6 = {
       },
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -2955,7 +3343,17 @@ var options7 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       bar: {
@@ -2973,7 +3371,6 @@ var options7 = {
       },
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
@@ -3000,7 +3397,17 @@ var options8 = {
       height: 60,
       sparkline: {
           enabled: true
-      }
+      },
+      dropShadow: {
+        enabled: true,
+        top: 10,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        blur: 2,
+        color: '#b6c2e4',
+        opacity: 0.35
+      },
   },
   plotOptions: {
       bar: {
@@ -3018,7 +3425,6 @@ var options8 = {
       },
   },
   tooltip: {
-    theme: "dark",
       fixed: {
           enabled: false
       },
